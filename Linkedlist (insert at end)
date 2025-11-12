@@ -1,0 +1,30 @@
+// C function to insert linkedlist at end
+
+typedef struct Node
+{
+int data;
+Node*next;
+}Node;
+
+Node* head = NULL;
+
+void insert_At_end ( Node ** head, int data)
+{
+Node *new_node = (Node*) malloc (Sizeof (Node));
+
+if (new_node == NULL)
+return;
+
+if (*head ==NULL)
+return 
+
+new_node->data = data;
+new_node->next = NULL;
+
+Node *temp = *head;
+while (temp->next  !=NULL)
+{
+temp = temp->next;
+}
+temp->next = new_node;
+}
