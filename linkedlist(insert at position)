@@ -1,0 +1,39 @@
+// C function to insert the node at position 
+
+typedef struct Node
+{
+int data;
+struct Node *next;
+}Node;
+
+Node*head = NULL;
+int count = 0;
+
+void insert_at_pos (Node**head,int *count ,int pos,int data)
+{
+if (pos<0 || pos>  *count + 1)
+{
+printf ("invalid position\n");
+return;
+}
+
+if (*head ==NULL)
+{
+return;
+}
+Node *new_node = (Node*)malloc (sizeof (Node));
+new_node->data = data;
+new_node->next = NULL;
+
+Node * prev = *head;
+
+
+for (int i =0;i<pos -1;i++)
+{
+temp = temp->next;
+}
+new_node->next = temp->next ;
+temp->next = new_node;
+}
+
+
