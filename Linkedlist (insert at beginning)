@@ -1,0 +1,17 @@
+// C function to insert a node at beginning:
+
+typedef struct Node
+{
+int data;
+struct Node *next;
+}Node;
+
+Node* head =NULL;
+
+void insert_at_begin (Node**head , int data)
+{
+Node *new_node = (Node*) malloc (sizeof (Node));
+new_node ->data = data;
+new_node->next = *head;
+*head = new_node;
+}
